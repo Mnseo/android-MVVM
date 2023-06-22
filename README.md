@@ -1,4 +1,4 @@
-# 1_프로젝트 세팅 (2023.06.22 - 2023.06.23)
+# 1. 프로젝트 세팅 (2023.06.22 - 2023.06.23)
 ## 1-1. 프로젝트 생성
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7c2c336-b7ee-457f-8d4d-514d07e4f474/Untitled.png)
