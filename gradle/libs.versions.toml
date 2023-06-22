@@ -1,23 +1,27 @@
 [versions]
 corektx = "1.5.0"
 kotlin = "1.5.30"
-appcompat = "1.5.1"
+appcompat = "1.0.0"
 material = "1.6.1"
 junit = "4.13.2"
-testext = "1.1.3"
+testext = "1.1.1"
 testespresso = "3.4.0"
 coroutine = "1.6.4"
 room = "2.4.3"
 hilt = "2.43.2"
 paging = "3.0.1"
 javax = "1"
+retrofit="2.9.0"
 
 [libraries]
 core-ktx = {module="androidx.core:core-ktx", version.ref="corektx"}
 appcompat-appcompat = {module="androidx.appcompat:appcompat", version.ref="appcompat"}
 material-material = {module ="com.google.android.material:material", version.ref = "material"}
 javax-inject = {module = "javax.inject:javax.inject", version.ref = "javax"}
-kotlin-stdlib = {module = "org.jetbrains.kotlin:kotlin-stdlib", version="kotlin"}
+kotlin-stdlib = {module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref="kotlin"}
+test-ext = {module = "androidx.test.ext:junit", version.ref="testext"}
+test-espresso = {module = "androidx.test.espresso:espresso-core", version.ref="testespresso"}
+junit-junit = {module = "junit:junit", version.ref="junit"}
 
 hilt-android = {module = "com.google.dagger:hilt-android", version.ref="hilt"}
 hilt-compiler = {module = "com.google.dagger:hilt-compiler", version.ref="hilt"}
@@ -29,10 +33,20 @@ paging-ktx = {module="androidx.paging:paging-common-ktx", version.ref="paging"}
 coroutine-core = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref="coroutine"}
 coroutine-android = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref="coroutine"}
 
+room-runtime = {module = "androidx.room:room-runtime", version.ref="room"}
+room-ktx = {module = "androidx.room:room-ktx", version.ref="room"}
+room-paging = {module = "androidx.room:room-paging", version.ref="room"}
+room-compiler = {module = "androidx.room:room-compiler", version.ref="room"}
+
+retrofit-retrofit = {module = "com.squareup.retrofit2:retrofit", version.ref="retrofit"}
+retrofit-converter-gson = {module = "com.squareup.retrofit2:converter-gson", version.ref="retrofit"}
+
 
 [bundles]
 coroutine = ["coroutine-core", "coroutine-android"]
 hilt = ["hilt-android"]
 paging= ["paging-runtime", "paging-common", "paging-ktx"]
 javax = ["javax-inject"]
+room = ["room-runtime", "room-ktx", "room-paging"]
 kotlin = ["kotlin-stdlib"]
+retrofit = ["retrofit-retrofit", "retrofit-converter-gson"]
