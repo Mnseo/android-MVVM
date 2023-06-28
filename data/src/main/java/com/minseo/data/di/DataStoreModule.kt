@@ -15,5 +15,6 @@ import javax.inject.Singleton
 object DataStoreModule {
     @Singleton
     @Provides
-    fun dataStore(@ApplicationContext context: Context): DataStoreManager = DataStoreManager(context)
+    fun dataStore(@ApplicationContext context: Context): DataStoreManager =
+        DataStoreManager(context)
 }
