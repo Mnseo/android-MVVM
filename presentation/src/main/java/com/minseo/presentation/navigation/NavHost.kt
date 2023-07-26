@@ -6,24 +6,24 @@ import androidx.navigation.NavController
 import com.minseo.presentation.main.MainDestination
 import com.minseo.presentation.onboard.OnboardDestination
 
-//@Composable
-//fun NavHost(
-//    navController: NavController,
-//    modifier: Modifier = Modifier,
-//    startDestination: String
-//) {
-//    NavHost(
-//        navController = navController,
-//        startDestination = startDestination,
-//        modifier = modifier
-//    ) {
-//        //Navigation Graph
-//        onboardGraph(
-//            navigateToMain = {
-//                navController.navigate(MainDestination.route) {
-//                    popUpTo(OnboardDestination.route) {inclusive = true}
-//                }
-//            },
-//        )
-//    }
-//}
+@Composable
+fun NavHost(
+    navController: NavController,
+    modifier: Modifier = Modifier,
+    startDestination: String
+) {
+    NavHost(
+        navController = navController,
+        startDestination = startDestination,
+        modifier = modifier
+    ) {
+        //Navigation Graph
+        onboardGraph(
+            navigateToMain = {
+                navController.navigate(MainDestination.route) {
+                    popUpTo(OnboardDestination.route) {inclusive = true}
+                }
+            },
+        )
+    }
+}
