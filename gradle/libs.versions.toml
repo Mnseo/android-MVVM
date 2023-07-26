@@ -14,6 +14,8 @@ javax = "1"
 retrofit="2.9.0"
 navigation="2.6.0"
 datastore="1.0.0"
+compose="1.4.3"
+nav_compose="2.5.3"
 
 [libraries]
 core-ktx = {module="androidx.core:core-ktx", version.ref="corektx"}
@@ -27,6 +29,7 @@ junit-junit = {module = "junit:junit", version.ref="junit"}
 
 hilt-android = {module = "com.google.dagger:hilt-android", version.ref="hilt"}
 hilt-compiler = {module = "com.google.dagger:hilt-compiler", version.ref="hilt"}
+
 
 paging-runtime = {module="androidx.paging:paging-runtime", version.ref="paging"}
 paging-common = {module="androidx.paging:paging-common", version.ref="paging"}
@@ -47,9 +50,13 @@ navigation-fragment-ktx = {module = "androidx.navigation:navigation-fragment-ktx
 navigation-ui-ktx = {module = "androidx.navigation:navigation-ui-ktx", version.ref="navigation"}
 navigation-dynamic-features-fragment= {module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref="navigation"}
 navigation-testing = {module = "androidx.navigation:navigation-testing", version.ref="navigation"}
-navigation-compose = {module = "androidx.navigation:navigation-compose", version.ref="navigation"}
+navigation-compose = {module = "androidx.navigation:navigation-compose", version.ref="nav_compose"}
 
 datastore-preferences = {module = "androidx.datastore:datastore-preferences", version.ref="datastore"}
+
+compose-ui-ui = {module = "andoridx.compose.ui:ui", version.ref="compose"}
+compose-material-material = {module = "androidx.compose.material:material", version.ref="compose"}
+compose-ui-tooling-preview={module ="androidx.compose.ui:ui-tooling-preview", version.ref="compose"}
 
 [bundles]
 coroutine = ["coroutine-core", "coroutine-android"]
@@ -60,3 +67,4 @@ room = ["room-runtime", "room-ktx", "room-paging"]
 kotlin = ["kotlin-stdlib"]
 retrofit = ["retrofit-retrofit", "retrofit-converter-gson"]
 navigation = ["navigation-fragment-ktx", "navigation-ui-ktx", "navigation-dynamic-features-fragment", "navigation-testing", "navigation-compose"]
+compose = ["compose-ui-ui", "compose-material-material", "compose-ui-tooling-preview"]
