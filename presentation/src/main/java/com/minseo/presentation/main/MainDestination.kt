@@ -9,13 +9,12 @@ object MainDestination: NavigationDestination {
         get() = "main_route"
 }
 
-fun NavGraphBuilder.mainGraph(
-    navigateToOnBoard: () -> Unit,
-    navigati
-) {
-    composable(route = MainDestination.route) {
-        MainRoute(
-            onClickOnboard = navigateToOnBoard
-        )
-    }
-}
+//fun NavGraphBuilder.mainGraph(
+//    navigateToOnBoard: () -> Unit
+//) {
+//    composable(route = MainDestination.route) {
+//        MainRoute(
+//            onClickOnboard = navigateToOnBoard
+//        )
+//    }
+//}
