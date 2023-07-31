@@ -7,8 +7,6 @@ import com.minseo.presentation.navigation.NavigationDestination
 object MainDestination: NavigationDestination {
     override val route: String
         get() = "main_route"
-    override val destination: String
-        get() = "destination"
 }
 
 fun NavGraphBuilder.mainGraph(){

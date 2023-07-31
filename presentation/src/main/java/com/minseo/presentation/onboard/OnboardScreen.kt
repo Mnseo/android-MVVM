@@ -9,5 +9,5 @@ fun OnboardRoute(
     navigateToMain:() -> Unit,
     viewModel: OnboardViewModel = hiltViewModel()
 ) {
-    val onBoardingList by
+
 }
