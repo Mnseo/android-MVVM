@@ -8,6 +8,7 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.minseo.data.local.Keys.APP_VISIT_DATE
 import com.minseo.data.local.Keys.DEVICE_TOKEN
+import com.minseo.data.local.Keys.INTRODUCE_COMMENTS
 import com.minseo.data.local.Keys.SHOW_ON_BOARDING
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
@@ -20,6 +21,7 @@ private val Context.dataStore by preferencesDataStore(APP_NAME)
 
 //Preference Keys
 object Keys {
+    val INTRODUCE_COMMENTS = booleanPreferencesKey("introduce_comments")
     val SHOW_ON_BOARDING = booleanPreferencesKey("onBoarding")
     val DEVICE_TOKEN = stringPreferencesKey("device_token")
     val APP_VISIT_DATE = intPreferencesKey("visitDate")
@@ -55,6 +57,10 @@ class DataStoreManager @Inject constructor(@ApplicationContext appContext: Conte
         settingsDataStore.edit { pref ->
             pref[SHOW_ON_BOARDING] = false
         }
+    }
+
+    val introduceComments: Flow<Boolean> = settingsDataStore.data.map {
+        it[INTRODUCE_COMMENTS] ?: true
     }
 
 }
