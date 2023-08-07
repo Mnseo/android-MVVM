@@ -7,6 +7,14 @@ android {
     namespace 'com.minseo.presentation'
     compileSdk 32
 
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.0'
+        kotlinCompilerVersion '1.5.30'
+    }
     defaultConfig {
         minSdk 24
         targetSdk 32
