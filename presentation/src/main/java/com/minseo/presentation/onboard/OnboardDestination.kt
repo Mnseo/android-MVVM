@@ -10,7 +10,7 @@ object OnboardDestination: NavigationDestination {
 }
 
 fun NavGraphBuilder.onboardGraph(
-    navigateToMain:() ->Unit
+    navigateToMain:() -> Unit
 ) {
     composable(route = OnboardDestination.route) {
         OnboardRoute(
